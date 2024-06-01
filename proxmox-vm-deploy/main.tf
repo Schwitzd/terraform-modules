@@ -7,7 +7,7 @@ resource "tls_private_key" "virtual_machine_keys" {
 resource "local_sensitive_file" "pem_file" {
   count = local.ssh_keys == "enabled" ? 1 : 0
 
-  filename        = pathexpand("~/.ssh/${var.name}.mylab.ed25519")
+  filename        = pathexpand("~/.ssh/${local.fqdn}_ed25519")
   file_permission = "600"
   content         = tls_private_key.virtual_machine_keys[0].private_key_openssh
 }

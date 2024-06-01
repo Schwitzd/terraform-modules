@@ -15,6 +15,11 @@ variable "name" {
   type        = string
 }
 
+variable "domain" {
+  description = "The domain of the VM"
+  type        = string
+}
+
 variable "description" {
   description = "The description of the VM"
   type        = string
