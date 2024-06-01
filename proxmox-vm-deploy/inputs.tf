@@ -91,6 +91,17 @@ variable "onboot" {
   default     = false
 }
 
+variable "vm_state" {
+  description = "The desired state of the VM"
+  type        = string
+  default     = "stopped"
+
+  validation {
+    condition     = can(regex("^(started|stopped|running)$", var.vm_state))
+    error_message = "Valid values for 'vm_state' are 'started', 'stopped', or 'running'"
+  }
+}
+
 variable "vga_type" {
   description = "The VGA type for the Proxmox VM."
   type        = string
@@ -161,13 +172,8 @@ variable "searchdomain" {
 # Hardware
 
 variable "disks" {
-  type = map(object({
-    type    = string
-    storage = string
-    size    = string
-    discard = string
-  }))
-  default = {}
+  description = "List of disks to configure"
+  type = map()
 }
 
 variable "networks" {
