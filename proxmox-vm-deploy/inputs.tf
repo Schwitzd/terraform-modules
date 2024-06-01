@@ -173,7 +173,7 @@ variable "searchdomain" {
 
 variable "disks" {
   description = "List of disks to configure"
-  type = map()
+  type = map(any)
 }
 
 variable "networks" {
