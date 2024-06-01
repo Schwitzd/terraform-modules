@@ -13,13 +13,13 @@ terraform {
 }
 
 provider "vault" {
-  address          = "http://localhost:8200"
+  address          = var.vault_url
   token            = var.vault_token
   skip_child_token = true
 }
 
 provider "proxmox" {
-  pm_api_url          = "https://proxmox.mylab.io:8006/api2/json"
+  pm_api_url          = var.proxmox_url
   pm_api_token_id     = data.vault_generic_secret.proxmox.data["api_token_id"]
   pm_api_token_secret = data.vault_generic_secret.proxmox.data["api_token_secret"]
   pm_tls_insecure     = true

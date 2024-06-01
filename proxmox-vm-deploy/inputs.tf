@@ -1,8 +1,18 @@
 # Basics
+variable "vault_url" {
+  description = "The Vault address"
+  type        = string
+}
+
 variable "vault_token" {
   description = "The Vault API token"
   type        = string
   sensitive   = true
+}
+
+variable "proxmox_url" {
+  description = "The Proxmox cluster address"
+  type        = string
 }
 
 variable "target_node" {
