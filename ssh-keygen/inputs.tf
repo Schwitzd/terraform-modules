@@ -1,6 +1,7 @@
 variable "algorithm" {
   description = "Name of the algorithm to use when generating the private key. Supported values are: RSA, ECDSA, ED25519."
   type        = string
+  default     = "ED25519"
   validation {
     condition     = contains(["RSA", "ECDSA", "ED25519"], var.algorithm)
     error_message = "The algorithm must be one of the following: RSA, ECDSA, ED25519."
