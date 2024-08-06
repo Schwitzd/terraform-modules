@@ -11,7 +11,7 @@ variable "algorithm" {
 variable "ecdsa_curve" {
   description = "When algorithm is ECDSA, the name of the elliptic curve to use. Supported values are: P224, P256, P384, P521."
   type        = string
-  default     = "P224"
+  default     = "P384"
   validation {
     condition     = var.algorithm != "ECDSA" || contains(["P224", "P256", "P384", "P521"], var.ecdsa_curve)
     error_message = "The ecdsa_curve must be one of the following: P224, P256, P384, P521 when algorithm is ECDSA."
@@ -21,7 +21,7 @@ variable "ecdsa_curve" {
 variable "rsa_bits" {
   description = "When algorithm is RSA, the size of the generated RSA key, in bits."
   type        = number
-  default     = 2048
+  default     = 4096
   validation {
     condition     = var.algorithm != "RSA" || (var.rsa_bits >= 512 && var.rsa_bits <= 16384)
     error_message = "The rsa_bits must be between 512 and 16384 when algorithm is RSA."
