@@ -1,3 +1,8 @@
+/**
+ * # opnsense-firewall-alias
+ *
+ */
+
 resource "opnsense_firewall_alias" "main" {
   count = length(var.firewall_aliases)
 

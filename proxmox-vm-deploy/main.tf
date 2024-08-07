@@ -1,3 +1,8 @@
+/**
+ * # proxmox-vm-deploy
+ *
+ */
+
 resource "tls_private_key" "virtual_machine_keys" {
   count = local.ssh_keys == "enabled" ? 1 : 0
 
