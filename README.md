@@ -26,8 +26,8 @@ Here's an example of how to use the `ssh-keygen` from this repository:
 
 ```hcl
 # main.tf
-module "ssh-key-ed25519" {
-  source = "https://github.com/Schwitzd/terraform-modules//ssh-keygen"
+module "ssh-key-test" {
+  source = "git::https://github.com/Schwitzd/terraform-modules.git//ssh-keygen"
   
   algorithm     = "ED25519"
   keys_name     = "foo.example.com"
