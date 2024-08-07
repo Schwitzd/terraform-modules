@@ -1,6 +1,10 @@
 <!-- BEGIN_TF_DOCS -->
 # ssh-keygen
 
+This Terraform module generates SSH keys using the specified algorithm.
+It optionally writes the private and public keys to local files with appropriate permissions.
+Users can configure the algorithm, key parameters, and file output settings.
+
 ## Requirements
 
 | Name | Version |
