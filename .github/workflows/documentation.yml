@@ -18,6 +18,7 @@ jobs:
       with:
         config-file: .terraform-docs.yml
         working-dir: .
+        find-dir: .
         recursive: true
         recursive-path: .
         output-file: README.md
