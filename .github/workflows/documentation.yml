@@ -20,7 +20,7 @@ jobs:
         working-dir: .
 #        find-dir: .
         recursive: true
-#        recursive-path: .
+        recursive-path: .
         output-file: README.md
         output-method: inject
         git-push: "true"
