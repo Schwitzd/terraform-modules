@@ -13,7 +13,7 @@ variable "ecdsa_curve" {
   type        = string
   default     = "P384"
   validation {
-    condition     = var.algorithm != "ECDSA" || contains(["P224", "P256", "P384", "P521"], var.ecdsa_curve)
+    condition     = contains(["P224", "P256", "P384", "P521"], var.ecdsa_curve)
     error_message = "The ecdsa_curve must be one of the following: P224, P256, P384, P521 when algorithm is ECDSA."
   }
 }
