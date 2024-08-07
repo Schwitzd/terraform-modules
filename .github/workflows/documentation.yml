@@ -13,9 +13,10 @@ jobs:
       with:
         ref: main
 
-    - name: Render terraform docs and push changes back to PR
+    - name: Render terraform docs and push changes back
       uses: terraform-docs/gh-actions@main
       with:
+        config-file: .terraform-docs.yml
         working-dir: .
         recursive: true
         recursive-path: .
