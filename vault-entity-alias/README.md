@@ -1,4 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
+# vault-entity-alias
+
 ## Requirements
 
 | Name | Version |

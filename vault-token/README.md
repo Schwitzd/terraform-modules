@@ -1,4 +1,6 @@
 <!-- BEGIN_TF_DOCS -->
+# vault-token
+
 ## Requirements
 
 | Name | Version |
