@@ -17,6 +17,7 @@ jobs:
       with:
         working-dir: .
         recursive: true
+        recursive-path: .
         output-file: README.md
         output-method: inject
         git-push: "true"
