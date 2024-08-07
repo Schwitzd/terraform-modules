@@ -18,9 +18,9 @@ jobs:
       with:
         config-file: .terraform-docs.yml
         working-dir: .
-#        find-dir: .
+        find-dir: .
         recursive: true
-        recursive-path: .
+#        recursive-path: .
         output-file: README.md
         output-method: inject
         git-push: "true"
