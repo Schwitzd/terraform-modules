@@ -23,3 +23,29 @@ If you encounter any issues with the modules in this repository, please feel fre
 ## License
 
 This repository is licensed under the [MIT License](LICENSE).
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
