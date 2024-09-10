@@ -173,7 +173,13 @@ variable "searchdomain" {
 
 variable "disks" {
   description = "List of disks to configure"
-  type = map(any)
+  type = list(object({ 
+    slot       = string    
+    size       = string
+    storage    = string
+    discard    = bool
+  }))
+  default = [{}]
 }
 
 variable "networks" {
