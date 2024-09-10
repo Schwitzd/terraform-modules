@@ -179,7 +179,7 @@ variable "disks" {
     storage    = string
     discard    = bool
   }))
-  default = [{}]
+  default = []
 }
 
 variable "networks" {
