@@ -46,10 +46,14 @@ resource "proxmox_vm_qemu" "virtual_machines" {
   agent                  = 1
   tags                   = var.tags
 
-  dynamic "disks" {
+  dynamic "disk" {
     for_each = var.disks
+    
     content {
-      for_each = [true]
+      slot    = disk.value.slot
+      size    = disk.value.size
+      storage = disk.value.storage
+      discard = disk.value.discard
     }
   }
 
