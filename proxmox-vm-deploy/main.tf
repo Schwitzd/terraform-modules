@@ -48,9 +48,10 @@ resource "proxmox_vm_qemu" "virtual_machines" {
 
   dynamic "disk" {
     for_each = var.disks
-    
+
     content {
       slot    = disk.value.slot
+      type    = disk.value.type
       size    = disk.value.size
       storage = disk.value.storage
       discard = disk.value.discard

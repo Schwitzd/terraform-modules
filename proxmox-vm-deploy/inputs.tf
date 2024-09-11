@@ -176,9 +176,9 @@ variable "disks" {
   type = list(object({
     slot    = string
     type    = string
-    size    = string
+    size    = optional(string)
     storage = string
-    discard = bool
+    discard = optional(bool)
   }))
   default = []
 }
