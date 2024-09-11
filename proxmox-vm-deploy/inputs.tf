@@ -173,7 +173,7 @@ variable "searchdomain" {
 
 variable "disks" {
   description = "List of disks"
-  type = map(object({
+  type = list(object({
     slot    = string
     type    = string
     size    = string
