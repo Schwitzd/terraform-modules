@@ -41,7 +41,7 @@ No modules.
 | <a name="input_clone"></a> [clone](#input\_clone) | The base VM from which to clone to create the new VM | `string` | `null` | no |
 | <a name="input_cores"></a> [cores](#input\_cores) | The number of CPU cores per socket for the VM | `number` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | The description of the VM | `string` | n/a | yes |
-| <a name="input_disks"></a> [disks](#input\_disks) | List of disks | <pre>map(object({<br>    slot    = string<br>    type    = string<br>    size    = string<br>    storage = string<br>    discard = bool<br>  }))</pre> | `[]` | no |
+| <a name="input_disks"></a> [disks](#input\_disks) | List of disks | <pre>list(object({<br>    slot    = string<br>    type    = string<br>    size    = string<br>    storage = string<br>    discard = bool<br>  }))</pre> | `[]` | no |
 | <a name="input_dns_servers"></a> [dns\_servers](#input\_dns\_servers) | DNS servers | `string` | `null` | no |
 | <a name="input_domain"></a> [domain](#input\_domain) | The domain of the VM | `string` | n/a | yes |
 | <a name="input_hotplug"></a> [hotplug](#input\_hotplug) | Enable or disable hotplug support for the VM | `string` | n/a | yes |
