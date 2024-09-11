@@ -173,11 +173,12 @@ variable "searchdomain" {
 
 variable "disks" {
   description = "List of disks"
-  type = map(object({ 
-    slot       = string    
-    size       = string
-    storage    = string
-    discard    = bool
+  type = map(object({
+    slot    = string
+    type    = string
+    size    = string
+    storage = string
+    discard = bool
   }))
   default = []
 }
