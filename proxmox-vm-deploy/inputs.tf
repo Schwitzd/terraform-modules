@@ -172,8 +172,8 @@ variable "searchdomain" {
 # Hardware
 
 variable "disks" {
-  description = "List of disks to configure"
-  type = list(object({ 
+  description = "List of disks"
+  type = map(object({ 
     slot       = string    
     size       = string
     storage    = string
@@ -183,6 +183,7 @@ variable "disks" {
 }
 
 variable "networks" {
+  description = "List of NICs"
   type = map(object({
     model  = string
     bridge = string
