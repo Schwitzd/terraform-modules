@@ -48,6 +48,11 @@ variable "qemu_os" {
 variable "bios" {
   description = "The BIOS type for the VM"
   type        = string
+
+  validation {
+    condition     = can(regex("^(seabios|ovmf)$", var.bios))
+    error_message = "Valid values for 'bios' are 'seabios' or 'ovmf'"
+  }
 }
 
 variable "memory" {

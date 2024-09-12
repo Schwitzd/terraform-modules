@@ -46,6 +46,16 @@ resource "proxmox_vm_qemu" "virtual_machines" {
   agent                  = 1
   tags                   = var.tags
 
+
+  dynamic "efidisk" {
+    for_each = var.bios == "ovmf" ? [1] : []
+
+    content {
+      efitype = "4m"
+      storage = "local-lvm"
+    }
+  }
+
   dynamic "disk" {
     for_each = var.disks
 
