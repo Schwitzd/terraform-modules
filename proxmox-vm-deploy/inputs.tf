@@ -180,6 +180,7 @@ variable "disks" {
   description = "List of disks"
   type = list(object({
     slot    = string
+    id      = optional(number)
     type    = string
     size    = optional(string)
     storage = string
