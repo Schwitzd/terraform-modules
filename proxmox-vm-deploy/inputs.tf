@@ -118,13 +118,6 @@ variable "tags" {
   type        = string
 }
 
-# Iso
-variable "iso" {
-  type        = string
-  description = "The ISO image for installing the VM's operating system."
-  default     = null
-}
-
 # Template
 variable "clone" {
   description = "The base VM from which to clone to create the new VM"
@@ -185,6 +178,7 @@ variable "disks" {
     size    = optional(string)
     storage = string
     discard = optional(bool)
+    iso     = optional(string)
   }))
   default = []
 }
