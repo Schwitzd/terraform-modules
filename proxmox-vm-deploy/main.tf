@@ -69,6 +69,7 @@ resource "proxmox_vm_qemu" "virtual_machines" {
       size    = disk.value.size
       storage = disk.value.storage
       discard = disk.value.discard
+      iso     = disk.value.iso
     }
   }
 
