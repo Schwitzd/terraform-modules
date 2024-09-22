@@ -30,7 +30,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_policy_name"></a> [policy\_name](#input\_policy\_name) | The name of the policy | `string` | n/a | yes |
-| <a name="input_policy_rules"></a> [policy\_rules](#input\_policy\_rules) | A map of policy names to their definitions | <pre>map(object({<br>    path         = string<br>    capabilities = list(string)<br>    description  = string<br>  }))</pre> | n/a | yes |
+| <a name="input_policy_rules"></a> [policy\_rules](#input\_policy\_rules) | A map of policy names to their definitions | <pre>map(object({<br/>    path         = string<br/>    capabilities = list(string)<br/>    description  = string<br/>  }))</pre> | n/a | yes |
 | <a name="input_vault_address"></a> [vault\_address](#input\_vault\_address) | The address of the HashiCorp Vault server | `string` | n/a | yes |
 | <a name="input_vault_token"></a> [vault\_token](#input\_vault\_token) | The authentication token for accessing the HashiCorp Vault server | `string` | n/a | yes |
 

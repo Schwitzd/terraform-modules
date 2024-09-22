@@ -30,7 +30,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_firewall_aliases"></a> [firewall\_aliases](#input\_firewall\_aliases) | n/a | <pre>list(object({<br>    name        = string<br>    type        = string<br>    content     = set(string)<br>    stats       = bool<br>    description = string<br>  }))</pre> | n/a | yes |
+| <a name="input_firewall_aliases"></a> [firewall\_aliases](#input\_firewall\_aliases) | n/a | <pre>list(object({<br/>    name        = string<br/>    type        = string<br/>    content     = set(string)<br/>    stats       = bool<br/>    description = string<br/>  }))</pre> | n/a | yes |
 | <a name="input_vault_token"></a> [vault\_token](#input\_vault\_token) | The Vault API token | `string` | n/a | yes |
 
 ## Outputs

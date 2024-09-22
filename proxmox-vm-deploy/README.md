@@ -41,17 +41,16 @@ No modules.
 | <a name="input_clone"></a> [clone](#input\_clone) | The base VM from which to clone to create the new VM | `string` | `null` | no |
 | <a name="input_cores"></a> [cores](#input\_cores) | The number of CPU cores per socket for the VM | `number` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | The description of the VM | `string` | n/a | yes |
-| <a name="input_disks"></a> [disks](#input\_disks) | List of disks | <pre>list(object({<br>    slot    = string<br>    type    = string<br>    size    = string<br>    storage = string<br>    discard = bool<br>  }))</pre> | `[]` | no |
+| <a name="input_disks"></a> [disks](#input\_disks) | List of disks | <pre>list(object({<br/>    slot    = string<br/>    id      = optional(number)<br/>    type    = string<br/>    size    = optional(string)<br/>    storage = string<br/>    discard = optional(bool)<br/>    iso     = optional(string)<br/>  }))</pre> | `[]` | no |
 | <a name="input_dns_servers"></a> [dns\_servers](#input\_dns\_servers) | DNS servers | `string` | `null` | no |
 | <a name="input_domain"></a> [domain](#input\_domain) | The domain of the VM | `string` | n/a | yes |
 | <a name="input_hotplug"></a> [hotplug](#input\_hotplug) | Enable or disable hotplug support for the VM | `string` | n/a | yes |
 | <a name="input_ip_address"></a> [ip\_address](#input\_ip\_address) | NIC ip address | `string` | `null` | no |
 | <a name="input_ip_gateway"></a> [ip\_gateway](#input\_ip\_gateway) | NIC ip gateway | `string` | `null` | no |
 | <a name="input_ip_mask"></a> [ip\_mask](#input\_ip\_mask) | NIC ip address netmask | `string` | `null` | no |
-| <a name="input_iso"></a> [iso](#input\_iso) | The ISO image for installing the VM's operating system. | `string` | `null` | no |
 | <a name="input_memory"></a> [memory](#input\_memory) | The amount of memory for the VM (in MB). | `number` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the VM | `string` | n/a | yes |
-| <a name="input_networks"></a> [networks](#input\_networks) | List of NICs | <pre>map(object({<br>    model  = string<br>    bridge = string<br>  }))</pre> | `{}` | no |
+| <a name="input_networks"></a> [networks](#input\_networks) | List of NICs | <pre>map(object({<br/>    model  = string<br/>    bridge = string<br/>  }))</pre> | `{}` | no |
 | <a name="input_numa"></a> [numa](#input\_numa) | Enable or disable NUMA configuration for the VM | `bool` | n/a | yes |
 | <a name="input_onboot"></a> [onboot](#input\_onboot) | Whether to have the VM startup after the PVE node starts | `bool` | `false` | no |
 | <a name="input_pool"></a> [pool](#input\_pool) | The Proxmox pool to place the VM in | `string` | n/a | yes |
