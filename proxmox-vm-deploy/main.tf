@@ -25,14 +25,18 @@ resource "proxmox_vm_qemu" "virtual_machines" {
   name                   = var.name
   qemu_os                = var.qemu_os
   desc                   = var.description
+  pool                   = var.pool
   target_node            = var.target_node
   bios                   = var.bios
   clone                  = var.clone != null ? var.clone : null
   full_clone             = var.clone != null ? true : null
   os_type                = var.clone != null ? "cloud-init" : null
   memory                 = var.memory
+  numa                   = var.numa
   sockets                = var.sockets
   cores                  = var.cores
+  hotplug                = var.hotplug
+  scsihw                 = var.scsihw
   define_connection_info = var.clone != null ? true : null
   ssh_user               = local.ssh_keys == "enabled" ? var.ssh_user : null
   sshkeys                = local.ssh_keys == "enabled" ? tls_private_key.virtual_machine_keys[0].public_key_openssh : null
